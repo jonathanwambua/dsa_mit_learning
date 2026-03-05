@@ -1,0 +1,43 @@
+### Problem Session 1
+
+Problem 1: Ordering of functions (log functions grow slower than exponential functions assymptotically)
+
+Problem 2: Describe an algorithm to swap the first and the last items
+
+swap_ends (D): D means a data structure
+Know that: Delete returns the removed value
+We want constant time
+
+Pseudocode
+
+X1 = Delete first
+X2 = Delete last
+D Insert X2 at the front
+D Insert X1 at last
+
+#### Problem 2
+shift_left(D, k)
+Take the first k, and stick to the end
+I want the operation to O(K) time
+
+Recursion or for loop
+
+shift_left(D, k):
+    if (k < 1 or k>len(D)-1)
+        return
+    X = Delete first
+    D Insert last X
+    shift_left(D, k-1)
+
+O(K) time taken
+
+#### Problem 3
+-- did not understand, hehe
+
+#### Problem 4
+Given a linked list (DS), take the last n elements and reverse
+their order, do not make any new linked nodes, or instantiate other DS (in place)
+
+- Find nth node
+- Reverse next pointers of everything after the nth node (n+1 to 2n)
+- Clean up ends
